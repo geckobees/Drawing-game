@@ -1,10 +1,9 @@
 window.addEventListener('load', function() {
     const canvas = document.querySelector('canvas');
-    
-    const c = canvas.getContext('2d')
+    const c = canvas.getContext('2d');
 
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight / 2 + 100;
+    canvas.width = window.innerWidth / 2;
 
     let painting = false;
     var thickness = 10;
@@ -21,17 +20,26 @@ window.addEventListener('load', function() {
     function draw(event){
         if (!painting) return;
         c.lineWidth = thickness;
-        c.lineCap = "round";
+        c.lineCap = "round"; 
+        c.strokeStyle = "red";
         
-        c.lineTo(event.x, event.y);
+        const x = event.clientX - canvas.getBoundingClientRect().left;
+        const y = event.clientY - canvas.getBoundingClientRect().top;
+
+        c.lineTo(x, y);
         c.stroke();
         c.beginPath(); 
-        c.moveTo(event.x, event.y);
+        c.moveTo(x, y);
         
     }
-    canvas.addEventListener('mousemove', draw)
-    canvas.addEventListener('mousedown', startPos);
-    canvas.addEventListener('mouseup', endPos);
-    canvas.addEventListener('mouseout', endPos);
+
+    function changecolor(){
+
+    }
+
+    window.addEventListener('mousemove', draw)
+    window.addEventListener('mousedown', startPos);
+    window.addEventListener('mouseup', endPos);
+    window.addEventListener('mouseout', endPos);
 
 });

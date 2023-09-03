@@ -1,0 +1,23 @@
+.all {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+canvas {
+  border: 1px solid black;
+}
+
+.colourbuttons {
+  width: 40px;
+  border: 1px solid black;
+}
+.colourbuttons button {
+  height: 40px;
+  width: 40px;
+}
+
+.red {
+  background-color: red;
+}/*# sourceMappingURL=drawing.css.map */
