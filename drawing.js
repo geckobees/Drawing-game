@@ -1,9 +1,10 @@
 var color = 'black'
 var thickness = 10;
+const slider = document.getElementById('range');
+thickness = slider.value;
 window.addEventListener('load', function() {
     const canvas = document.querySelector('canvas');
     const c = canvas.getContext('2d');
-
     canvas.height = window.innerHeight / 2 + 100;
     canvas.width = window.innerWidth / 2;
 
@@ -43,6 +44,9 @@ window.addEventListener('load', function() {
 
 });
 
+slider.oninput = function(){
+    thickness = this.value;
+}
 
 function changecolor(id){
     if (id == 1){
