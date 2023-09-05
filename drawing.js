@@ -1,4 +1,5 @@
 var color = 'black'
+var thickness = 10;
 window.addEventListener('load', function() {
     const canvas = document.querySelector('canvas');
     const c = canvas.getContext('2d');
@@ -7,7 +8,6 @@ window.addEventListener('load', function() {
     canvas.width = window.innerWidth / 2;
 
     let painting = false;
-    var thickness = 10;
     
 
     function startPos(event){
@@ -45,11 +45,16 @@ window.addEventListener('load', function() {
 
 
 function changecolor(id){
-    var button = document.querySelector('button')
     if (id == 1){
         color = 'red'
     }
     if (id == 2){
         color = 'blue'
+    }
+    if (id == 3) {
+        color = 'orange'
+    }
+    if (id == 4){
+        color = 'green'
     }
 }
