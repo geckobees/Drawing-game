@@ -33,9 +33,6 @@ window.addEventListener('load', function() {
         
     }
 
-    function changecolor(){
-
-    }
 
     window.addEventListener('mousemove', draw)
     window.addEventListener('mousedown', startPos);
@@ -43,3 +40,9 @@ window.addEventListener('load', function() {
     window.addEventListener('mouseout', endPos);
 
 });
+
+
+function changecolor(){
+    var button = document.querySelector('button')
+    console.log(button.classList)
+}
