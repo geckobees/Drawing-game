@@ -1,3 +1,4 @@
+var color = 'black'
 window.addEventListener('load', function() {
     const canvas = document.querySelector('canvas');
     const c = canvas.getContext('2d');
@@ -7,6 +8,7 @@ window.addEventListener('load', function() {
 
     let painting = false;
     var thickness = 10;
+    
 
     function startPos(event){
         painting = true;
@@ -21,7 +23,7 @@ window.addEventListener('load', function() {
         if (!painting) return;
         c.lineWidth = thickness;
         c.lineCap = "round"; 
-        c.strokeStyle = "red";
+        c.strokeStyle = color;
         
         const x = event.clientX - canvas.getBoundingClientRect().left;
         const y = event.clientY - canvas.getBoundingClientRect().top;
@@ -42,7 +44,12 @@ window.addEventListener('load', function() {
 });
 
 
-function changecolor(){
+function changecolor(id){
     var button = document.querySelector('button')
-    console.log(button.classList)
+    if (id == 1){
+        color = 'red'
+    }
+    if (id == 2){
+        color = 'blue'
+    }
 }

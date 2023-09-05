@@ -11,10 +11,15 @@ canvas {
     button {
         height: 40px;
         width: 40px;
+        border-radius: 5px;
+
     }
     width: 40px;
     border: 1px solid black;
 }
 .red {
     background-color: red;
+}
+.blue {
+     background-color: blue;       
 }

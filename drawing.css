@@ -16,8 +16,13 @@ canvas {
 .colourbuttons button {
   height: 40px;
   width: 40px;
+  border-radius: 5px;
 }
 
 .red {
   background-color: red;
+}
+
+.blue {
+  background-color: blue;
 }/*# sourceMappingURL=drawing.css.map */
