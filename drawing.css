@@ -30,12 +30,8 @@ canvas {
   background-color: green;
 }
 
-.size .sizebutton1 .circle {
-  justify-self: center;
-  height: 10px;
-  width: 10px;
-  border: 1px solid black;
-  border-radius: 50px;
+.black {
+  background-color: black;
 }
 
 button {
