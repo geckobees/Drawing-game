@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jshint": "^2.13.6",
+    "socket.io": "^4.7.2"
+  }
+}
