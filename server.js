@@ -1,3 +1,5 @@
-const logger = require('./logger');
+const fs = require('fs');
 
-logger.log('message');
+var a = fs.readdirSync('./')
+
+console.log(a);
