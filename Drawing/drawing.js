@@ -48,6 +48,8 @@ slider.oninput = function(){
     thickness = this.value;
 }
 
+
+
 function changecolor(id){
     if (id == 1){
         color = 'red'
