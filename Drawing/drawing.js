@@ -1,6 +1,7 @@
 var color = 'black'
 var thickness = 10;
 const slider = document.getElementById('range');
+const button = document.getElementById('toPngButton');
 thickness = slider.value;
 window.addEventListener('load', function() {
     const canvas = document.querySelector('canvas');
@@ -34,6 +35,9 @@ window.addEventListener('load', function() {
         c.beginPath(); 
         c.moveTo(x, y);
         
+        button.addEventListener("click", () => {
+            console.log(canvas.toDataURL());
+        });
     }
 
 
@@ -47,6 +51,8 @@ window.addEventListener('load', function() {
 slider.oninput = function(){
     thickness = this.value;
 }
+
+
 
 
 
