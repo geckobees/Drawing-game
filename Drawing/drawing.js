@@ -36,7 +36,7 @@ window.addEventListener('load', function() {
         c.moveTo(x, y);
         
         button.addEventListener("click", () => {
-            console.log(canvas.toDataURL());
+            console.log(canvas.toDataURL("image/jpeg"));
         });
     }
 
